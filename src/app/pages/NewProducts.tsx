@@ -63,14 +63,16 @@ const NewProducts = () => {
 {posts.map((post) => (
               <li key={post.id}>
                 <h2>{post.name}</h2>
-                <p>{post.internalName}</p>           
+                <p>{post.description}</p>     
+            
+            <div>
+                </div>     
                 </li>
             ))}
 
 {menus.map((menu) => (
   <li key={menu.id}>
     <h2>{menu.name}</h2>
-    {/* Check if sections and items arrays exist and are not empty before accessing properties */}
     {menu.sections && menu.sections.length > 0 && menu.sections[0]?.items && menu.sections[0].items.length > 0 && (
       <Image
         src={menu.sections[0].items[0].images[0]?.image}  
