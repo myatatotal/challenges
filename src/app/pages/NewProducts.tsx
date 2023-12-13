@@ -1,9 +1,11 @@
-
 import React, { useEffect, useState } from "react";
-import styles from "./page.module.scss";
+import "./NewProducts.scss";
 import Image from "next/image";
 import axios from "axios";
-
+import Link from "next/link";
+import router, { withRouter } from "next/router";
+import { Tabs, Tab } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 interface Post {
   webSettings: any;
   id: number;
@@ -41,7 +43,6 @@ const NewProducts = () => {
       }
     };
 
-    
     const fetchDataMenu = async () => {
       try {
         const res = await axios.get("http://localhost:4000/menu", {
@@ -52,41 +53,213 @@ const NewProducts = () => {
         console.error("Error fetching data:", error);
       }
     };
-    
+
     fetchData();
     fetchDataMenu();
   }, []);
 
   return (
     <>
+      <div className="container">
+        <div className="stage-container">
+          <div className="buy">
+            <div className="buy-car">
+              <h2>Carrinho</h2>
+            </div>
+            <div className="buy-car-zero">
+              {" "}
+              <h3>Seu carrinho esta vazio</h3>
+            </div>
+          </div>
 
-{posts.map((post) => (
-              <li key={post.id}>
-                <h2>{post.name}</h2>
-                <p>{post.description}</p>     
-            
-            <div>
-                </div>     
+          <div className="stage-container-large">
+            <div className="images">
+              {menus.map((menu) => (
+                <li key={menu.id}>
+                  {/* <h2>{menu.name}</h2> */}
+                  {menu.sections &&
+                    menu.sections.length > 0 &&
+                    menu.sections[0]?.items &&
+                    menu.sections[0].items.length > 0 && (
+                      <Image
+                        src={menu.sections[0].items[0].images[0]?.image}
+                        alt={menu.sections[0].items[0].name}
+                        height={100}
+                        width={100}
+                      />
+                    )}
                 </li>
-            ))}
+              ))}
 
-{menus.map((menu) => (
-  <li key={menu.id}>
-    <h2>{menu.name}</h2>
-    {menu.sections && menu.sections.length > 0 && menu.sections[0]?.items && menu.sections[0].items.length > 0 && (
-      <Image
-        src={menu.sections[0].items[0].images[0]?.image}  
-        alt={menu.sections[0].items[0].name}  
-        height={640}
-        width={640}
-      />
-    )}
-  </li>
-))}
+              {menus.map((menu) => (
+                <li key={menu.id}>
+                  {/* <h2>{menu.name}</h2> */}
+                  {menu.sections &&
+                    menu.sections.length > 0 &&
+                    menu.sections[0]?.items &&
+                    menu.sections[0].items.length > 0 && (
+                      <Image
+                        src={menu.sections[0].items[0].images[0]?.image}
+                        alt={menu.sections[0].items[0].name}
+                        height={100}
+                        width={100}
+                      />
+                    )}
+                </li>
+              ))}
 
+              {menus.map((menu) => (
+                <li key={menu.id}>
+                  {/* <h2>{menu.name}</h2> */}
+                  {menu.sections &&
+                    menu.sections.length > 0 &&
+                    menu.sections[0]?.items &&
+                    menu.sections[0].items.length > 0 && (
+                      <Image
+                        src={menu.sections[0].items[0].images[0]?.image}
+                        alt={menu.sections[0].items[0].name}
+                        height={100}
+                        width={100}
+                      />
+                    )}
+                </li>
+              ))}
+            </div>
 
+            <Tabs
+              defaultActiveKey="profile"
+              id="uncontrolled-tab-example"
+              className="mb-3 ulno"
+            >
+              <Tab className="mb-3 ulna" eventKey="home" title="Burgers">
+                <Accordion defaultActiveKey="0">
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header>Burgers</Accordion.Header>
+                    <Accordion.Body>
+                      <div className="accbody">
+                      {menus.map((menu) => (
+                        <li key={menu.id}>
+                          <div className="fifty">
+                          <h2>{menu.sections[0].items[0]?.name}</h2>
+                          <p>{menu.sections[0].items[0]?.description}</p>
+                          </div>
 
+                          <div className="fifty-two">
+                          {menu.sections &&
+                            menu.sections.length > 0 &&
+                            menu.sections[0]?.items &&
+                            menu.sections[0].items.length > 0 && (
+                              <Image
+                                src={menu.sections[0].items[0].images[0]?.image}
+                                alt={menu.sections[0].items[0].name}
+                                height={100}
+                                width={150}
+                              />
+                            )}               
+                            </div>
 
+                        </li>
+                      ))}                  
+                      </div>
+
+                      <div className="accbody">
+                      {menus.map((menu) => (
+                        <li key={menu.id}>
+                          <div className="fifty">
+                          <h2>{menu.sections[0].items[0]?.name}</h2>
+                          <p>{menu.sections[0].items[0]?.description}</p>
+                          </div>
+
+                          <div className="fifty-two">
+                          {menu.sections &&
+                            menu.sections.length > 0 &&
+                            menu.sections[0]?.items &&
+                            menu.sections[0].items.length > 0 && (
+                              <Image
+                                src={menu.sections[0].items[0].images[0]?.image}
+                                alt={menu.sections[0].items[0].name}
+                                height={100}
+                                width={150}
+                              />
+                            )}               
+                            </div>
+
+                        </li>
+                      ))}                  
+                      </div>
+
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Tab>
+              <Tab className="mb-3 ulna" eventKey="profile" title="Drinks">
+                <Accordion>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>Drinks</Accordion.Header>
+                    <Accordion.Body>
+                      {menus.map((menu) => (
+                        <li key={menu.id}>
+                          <div className="fifty">
+                          <h2>{menu.sections[0].items[0]?.name}</h2>
+                          <p>{menu.sections[0].items[0]?.description}</p>
+                          </div>
+
+                          <div className="fifty-two">
+                          {menu.sections &&
+                            menu.sections.length > 0 &&
+                            menu.sections[0]?.items &&
+                            menu.sections[0].items.length > 0 && (
+                              <Image
+                                src={menu.sections[0].items[0].images[0]?.image}
+                                alt={menu.sections[0].items[0].name}
+                                height={100}
+                                width={150}
+                              />
+                            )}               
+                            </div>
+
+                        </li>
+                      ))}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Tab>
+              <Tab className="mb-3 ulna" eventKey="contact" title="Desserts">
+                <Accordion>
+                  <Accordion.Item eventKey="2">
+                    <Accordion.Header>Desserts</Accordion.Header>
+                    <Accordion.Body>
+                      {menus.map((menu) => (
+                        <li key={menu.id}>
+                          <div className="fifty">
+                          <h2>{menu.sections[0].items[0]?.name}</h2>
+                          <p>{menu.sections[0].items[0]?.description}</p>
+                          </div>
+
+                          <div className="fifty-two">
+                          {menu.sections &&
+                            menu.sections.length > 0 &&
+                            menu.sections[0]?.items &&
+                            menu.sections[0].items.length > 0 && (
+                              <Image
+                                src={menu.sections[0].items[0].images[0]?.image}
+                                alt={menu.sections[0].items[0].name}
+                                height={100}
+                                width={150}
+                              />
+                            )}               
+                            </div>
+
+                        </li>
+                      ))}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Tab>
+            </Tabs>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

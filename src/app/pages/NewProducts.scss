@@ -1,0 +1,162 @@
+.buy {
+  width: 30%;
+  height: auto;
+  background-color: #f8f9fa;
+  margin-left: auto;
+  float: right;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.buy-car {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin-left: auto;
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.buy-car-zero {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background-color: white;
+  margin-left: auto;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.stage-container {
+  min-height: 100vh;
+}
+
+.stage-container-large {
+  width: 68%;
+  height: 95vh;
+  float: left;
+  background-color: #f8f9fa;
+  margin-right: auto;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.image-context {
+  border-radius: 50px;
+}
+
+.ulno {
+  background-color: transparent !important;
+}
+
+.ulna {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: transparent !important;
+  }
+
+.nav-tabs {
+  margin-top: 50px;
+  border-bottom: 0px solid transparent;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: black;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  color: black;
+  background-color: transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 0px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.nav-link:focus-visible {
+    box-shadow: transparent;
+}
+
+.images img {
+    border-radius: 60px;
+    border: 0;
+}
+
+img a {
+    border: 0 solid transparent;
+    color: transparent;
+    background-color: transparent;
+    border-bottom: 0;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: transparent;
+    border-top-right-radius: transparent;
+}
+
+.accordion-item {
+    border: 0 solid transparent;
+}
+
+.accordion {
+    --bs-accordion-bg: transparent !important;
+    --bs-accordion-border-color: transparent;
+}
+
+.fifty {
+    width: 70%;
+    float: left;
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+.accbody {
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+
+.fifty-two {
+    float: right;
+    img {
+        border-radius: 10px;
+    }
+}
+
+.accordion-item:first-of-type .accordion-button {
+    font-size: 20px;
+    color:black;
+}
+
+li:hover::after {
+    border: 0 solid transparent !important;
+}
+
+li:hover {
+    border: 0 solid transparent !important;
+}
+
+ul:hover::after {
+    border-bottom: 0 solid transparent !important;
+}
