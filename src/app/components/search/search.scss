@@ -1,46 +1,45 @@
 .form-inputs {
-    width: 100%;
-    height:100px;
-    padding: 20px;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
 }
 
 .form-control {
-    text-indent: 50px;
-    z-index: 0;
-    position: relative;
-    background-color: white;
-    border: 1px solid black;
+  text-indent: 50px;
+  z-index: 0;
+  position: relative;
+  background-color: white;
+  border: 1px solid black;
 }
 
 .bi-search {
-    font-size: 30px;
-    float: left;
-    padding: 10px;
-    z-index: 1;
-    position: relative;
-    display: block;
-    margin-left: 40px;
-   
+  font-size: 30px;
+  float: left;
+  padding: 10px;
+  z-index: 1;
+  position: relative;
+  display: block;
+  margin-left: 40px;
 }
 
 .search-container {
-    position: relative;
-  }
+  position: relative;
+}
 
-  .search-icon {
-    position: absolute;
-    top: 40%;
-    left: 10px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
+.search-icon {
+  position: absolute;
+  top: 40%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
-  .stage-container {
-    background-color: #F8F9FA;
-    padding: 20px;
-  }
+.stage-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+}

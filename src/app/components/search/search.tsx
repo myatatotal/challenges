@@ -10,12 +10,15 @@ type HeaderType = {
 const Search = ({ isErrorPage }: HeaderType) => {
   return (
     <div className="container search-container">
-        <div className="d-flex form-inputs">
-        <i className="bi bi-search search-icon"></i>       
-        <input className="form-control" type="text" placeholder="Search menu items" />
-
-        </div>
+      <div className="d-flex form-inputs">
+        <i className="bi bi-search search-icon"></i>
+        <input
+          className="form-control"
+          type="text"
+          placeholder="Search menu items"
+        />
       </div>
+    </div>
   );
 };
 

@@ -137,31 +137,31 @@ const NewProducts = () => {
                     <Accordion.Header>Burgers</Accordion.Header>
                     <Accordion.Body>
                       <div className="accbody">
-                      {menus.map((menu) => (
-                        <li key={menu.id}>
-                          <div className="fifty">
-                          <h2>{menu.sections[0].items[0]?.name}</h2>
-                          <p>{menu.sections[0].items[0]?.description}</p>
-                          </div>
-
-                          <div className="fifty-two">
-                          {menu.sections &&
-                            menu.sections.length > 0 &&
-                            menu.sections[0]?.items &&
-                            menu.sections[0].items.length > 0 && (
-                              <Image
-                                src={menu.sections[0].items[0].images[0]?.image}
-                                alt={menu.sections[0].items[0].name}
-                                height={100}
-                                width={150}
-                              />
-                            )}               
+                        {menus.map((menu) => (
+                          <li key={menu.id}>
+                            <div className="fifty">
+                              <h2>{menu.sections[0].items[0]?.name}</h2>
+                              <p>{menu.sections[0].items[0]?.description}</p>
                             </div>
 
-                        </li>
-                      ))}                  
+                            <div className="fifty-two">
+                              {menu.sections &&
+                                menu.sections.length > 0 &&
+                                menu.sections[0]?.items &&
+                                menu.sections[0].items.length > 0 && (
+                                  <Image
+                                    src={
+                                      menu.sections[0].items[0].images[0]?.image
+                                    }
+                                    alt={menu.sections[0].items[0].name}
+                                    height={100}
+                                    width={150}
+                                  />
+                                )}
+                            </div>
+                          </li>
+                        ))}
                       </div>
-
                     </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
@@ -174,24 +174,25 @@ const NewProducts = () => {
                       {menus.map((menu) => (
                         <li key={menu.id}>
                           <div className="fifty">
-                          <h2>{menu.sections[0].items[0]?.name}</h2>
-                          <p>{menu.sections[0].items[0]?.description}</p>
+                            <h2>{menu.sections[0].items[0]?.name}</h2>
+                            <p>{menu.sections[0].items[0]?.description}</p>
                           </div>
 
                           <div className="fifty-two">
-                          {menu.sections &&
-                            menu.sections.length > 0 &&
-                            menu.sections[0]?.items &&
-                            menu.sections[0].items.length > 0 && (
-                              <Image
-                                src={menu.sections[0].items[0].images[0]?.image}
-                                alt={menu.sections[0].items[0].name}
-                                height={100}
-                                width={150}
-                              />
-                            )}               
-                            </div>
-
+                            {menu.sections &&
+                              menu.sections.length > 0 &&
+                              menu.sections[0]?.items &&
+                              menu.sections[0].items.length > 0 && (
+                                <Image
+                                  src={
+                                    menu.sections[0].items[0].images[0]?.image
+                                  }
+                                  alt={menu.sections[0].items[0].name}
+                                  height={100}
+                                  width={150}
+                                />
+                              )}
+                          </div>
                         </li>
                       ))}
                     </Accordion.Body>
@@ -206,24 +207,25 @@ const NewProducts = () => {
                       {menus.map((menu) => (
                         <li key={menu.id}>
                           <div className="fifty">
-                          <h2>{menu.sections[0].items[0]?.name}</h2>
-                          <p>{menu.sections[0].items[0]?.description}</p>
+                            <h2>{menu.sections[0].items[0]?.name}</h2>
+                            <p>{menu.sections[0].items[0]?.description}</p>
                           </div>
 
                           <div className="fifty-two">
-                          {menu.sections &&
-                            menu.sections.length > 0 &&
-                            menu.sections[0]?.items &&
-                            menu.sections[0].items.length > 0 && (
-                              <Image
-                                src={menu.sections[0].items[0].images[0]?.image}
-                                alt={menu.sections[0].items[0].name}
-                                height={100}
-                                width={150}
-                              />
-                            )}               
-                            </div>
-
+                            {menu.sections &&
+                              menu.sections.length > 0 &&
+                              menu.sections[0]?.items &&
+                              menu.sections[0].items.length > 0 && (
+                                <Image
+                                  src={
+                                    menu.sections[0].items[0].images[0]?.image
+                                  }
+                                  alt={menu.sections[0].items[0].name}
+                                  height={100}
+                                  width={150}
+                                />
+                              )}
+                          </div>
                         </li>
                       ))}
                     </Accordion.Body>
