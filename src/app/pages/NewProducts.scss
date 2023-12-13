@@ -160,3 +160,39 @@ li:hover {
 ul:hover::after {
     border-bottom: 0 solid transparent !important;
 }
+
+@media (max-width: 768px) {
+    .buy {
+        width: 100%;
+    }
+    .stage-container-large {
+        width: 100%;
+        .accbody {
+            width: 100%;
+            padding: 0;
+
+        }
+        .fifty{
+           width: 50%;  
+           height: auto;
+           padding: 10px;
+           float: left;
+           h2 {
+            font-size: 15px;
+        }
+        p {
+            font-size: 12px;
+        }  
+        }
+        .fifty-two{
+            width: 50%; 
+            height: auto;
+            padding: 10px;
+            display: flex;   
+        }
+    }
+
+    .accordion-body {
+        padding: 5px;
+    }
+}
